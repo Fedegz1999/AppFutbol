@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 
 
-export default function primera(data: any) {
+export default function ligue1(data: any) {
 
 let res = data.data.data[0].rank
 let partidos = data.matchs.games_pre.map((a:any) => a)
@@ -35,10 +35,7 @@ const logo = (team:string) => {
    
    }   
 
-   useEffect(()=>{
-      LoadRemove()  
-     })
-
+ 
 
 
 return (

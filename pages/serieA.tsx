@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 
 
-export default function primera(data: any) {
+export default function serieA(data: any) {
    
 
 let res = data.data.data[0].rank
@@ -31,9 +31,7 @@ const logo = (team:string) => {
       return(date.getDate()+"/"+(date.getMonth()+1+"  "+date.getHours()+":"+date.getMinutes()));
       }
      
-   useEffect(()=>{
-    LoadRemove()  
-   })
+   
       
 
 

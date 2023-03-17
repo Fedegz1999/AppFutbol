@@ -32,11 +32,7 @@ const logo = (team:string) => {
       return(date.getDate()+"/"+(date.getMonth()+1+"  "+date.getHours()+":"+date.getMinutes()));
       }
      
-   useEffect(()=>{
-    LoadRemove()  
-   })
-      
-useEffect
+ 
 
    return (
       <div className="bg-cesped">

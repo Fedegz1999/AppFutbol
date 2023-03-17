@@ -10,7 +10,7 @@ import { useEffect } from "react";
 
 
 
-export default function primera(data: any) {
+export default function bundesliga(data: any) {
 
    let res = data.data.data[0].rank
    let partidos = data.matchs.games_pre.map((a:any) => a)
@@ -41,9 +41,7 @@ export default function primera(data: any) {
       
       }   
    
-      useEffect(()=>{
-         LoadRemove()  
-        })
+      
    
    
    

@@ -1,4 +1,5 @@
 import { LoadRemove } from "./Loading"
+import Image from "next/image"
 
 export default function DetailsTeam (props: any) {
 
@@ -14,7 +15,7 @@ return (
         <h1 className='flex justify-center items-center font-black text-white pb-2 text-xl'>{props.data.name}</h1>
 
         <div className="flex shadow-xl  shadow-black rounded-2xl justify-center pb-2 items-center">
-        <img role={'img'}  src={props.data.images.urlLogo[0]}></img>
+        <Image alt="logo" role={'img'}  src={props.data.images.urlLogo[0]}></Image>
         </div>
 
 <div className="pt-4">

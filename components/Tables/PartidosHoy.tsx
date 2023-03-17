@@ -1,8 +1,13 @@
 import { fecha } from "@/utils/client"
+import Image from "next/image"
+import { useEffect } from "react"
+import { LoadRemove } from "../Loading"
 
 export const PartidosHoy = (props: any) => {
 
-
+  useEffect(()=>{
+    return LoadRemove()  
+   },[])
 
 
 let premier = props.hoy.games_pre.filter((a:any) => a.league.name === "England Premier League")
@@ -42,9 +47,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -71,9 +76,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -100,9 +105,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -129,9 +134,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -157,9 +162,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -186,9 +191,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -214,9 +219,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -242,9 +247,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -270,9 +275,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -298,9 +303,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -326,9 +331,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -354,9 +359,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -382,9 +387,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
@@ -410,9 +415,9 @@ return (
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{fecha(a.time)}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image></td>
 
         </tr>
         
