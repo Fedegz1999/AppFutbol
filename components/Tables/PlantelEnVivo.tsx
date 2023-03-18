@@ -4,9 +4,9 @@ import { LoadRemove } from "../Loading"
 export const PlantelEnVivo = (props:any) =>{
 
     useEffect(()=>{
-        return LoadRemove()  
-       },[])
-       
+        LoadRemove()  
+        })
+        
     return ( 
         <div className="md:flex gap-10 justify-center">
 <div>

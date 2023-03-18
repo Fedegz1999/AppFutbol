@@ -1,4 +1,4 @@
-import Image from "next/image"
+
 export default function Goles(props: any)  {
 
 
@@ -23,7 +23,7 @@ return (
 <tr key={a.id} className="text-white hover:bg-gray-900 bg-gray-800 border-b border-gray-700">
 
 <td className="text-center px-2 w-1 border-solid border-r-2">{a.rankGoals}</td>
-<td className="md:w-60 sm:w-auto border-solid border-r-2 flex items-center text-left  justify-start"><Image alt="logo" className="w-6" src={props.escudo(a.teamName)}></Image> {a.knownName} </td>
+<td className="md:w-60 sm:w-auto border-solid border-r-2 flex items-center text-left  justify-start"><img alt="logo" className="w-6" src={props.escudo(a.teamName)}></img> {a.knownName} </td>
 <td className="text-center px-2  border-solid border-r-2">{a.goals}</td>
 <td className="text-center px-2 border-solid border-r-2">{a.games}</td>
 <td className="text-center border-solid">{a.averageGoals}</td>

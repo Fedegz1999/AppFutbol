@@ -1,6 +1,6 @@
 import Router, { useRouter } from "next/router"
 import { LoadRemove, LoadStart } from "../Loading"
-import Image from "next/image"
+//import img from "next/img"
 import { useEffect } from "react"
 
 export function PartidosVivo (props:any) {
@@ -8,8 +8,8 @@ export function PartidosVivo (props:any) {
 const router = useRouter()
 
 useEffect(()=>{
-    return LoadRemove()  
-   },[])
+   LoadRemove()  
+   })
   
     let premier = props.vivo.games_live.filter((a:any) => a.league.name === "England Premier League")
     let laLiga = props.vivo.games_live.filter((a:any) => a.league.name === "Spain Primera Liga")
@@ -65,9 +65,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "- -"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -104,9 +104,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "- -"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>    
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -137,9 +137,9 @@ router.push(`/envivo/${id}`)
     return (
       
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "- -"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -166,9 +166,9 @@ router.push(`/envivo/${id}`)
     return (
  
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "- -"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -196,9 +196,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "- -"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className=" shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -226,9 +226,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "- -"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -255,9 +255,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "- -"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -285,9 +285,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : " - - "}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -315,9 +315,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "---"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -345,9 +345,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "---"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -377,9 +377,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "---"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className=" shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -407,9 +407,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "---"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className=" shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -437,9 +437,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "---"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>
@@ -466,9 +466,9 @@ router.push(`/envivo/${id}`)
     return (
         
     <tr  key={a.game_id} className="shadow-xl shadow-black border-solid border-2 border-blue-900 flex pt-1 gap-6 font-mono text-sm  text-cyan-50 bg-gray-800">
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><Image alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.home.id}.png`}></Image>{a.home.name}</td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-start"><img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6' src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>{a.home.name}</td>
     <td className="text-center items-center justify-center flex py-3">{a.timer !== "0:00" ? a.score : "---"}</td>
-    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<Image alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_Image alt="logo"/soccer/${a.away.id}.png`}></Image></td>
+    <td className="text-center py-3 md:w-40 w-full  items-center bg-cyan-800 flex justify-center  md:justify-end">{a.away.name}<img width={6} height={4} alt="logo" className='md:w-6 w-4 h-4 md:h-6 flex justify-end' src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img></td>
     <td className="text-center py-3 md:w-14 w-full border-solid border-blue-400 border-y-2 items-center bg-blue-800 flex justify-center">{a.timer.slice(0,2).includes(":") ?  a.timer.slice(0,1) + "'" : a.timer.slice(0,2) + "'"}</td>
     <td onClick={()=> onClick(a.game_id)} className="shadow md:shadow-white cursor-pointer absolute md:w-24 md:h-8 bg-green-600 md:mt-2 flex items-center justify-center border-2 border-solid border-green-900 font-mono font-bold hover:bg-green-500 -mt-7 right-0 md:right-1/4">EN VIVO ▶</td>
         </tr>

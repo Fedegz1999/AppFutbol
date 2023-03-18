@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next'
 import { PlantelEnVivo } from '@/components/Tables/PlantelEnVivo'
 import { LoadRemove, LoadStart } from '@/components/Loading'
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
+
 
 
 export default function enVivo (props:any) {
@@ -26,11 +26,11 @@ export default function enVivo (props:any) {
 </div>
 
 <div className='flex gap-10 items-center pb-4 justify-center '>
-<Image alt="foto" src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></Image>
+<img alt="foto" src={`https://spoyer.com/api/team_img/soccer/${a.home.id}.png`}></img>
 <div className='pt-6'>
 <h1 className='w-20 flex shadow-sm shadow-black justify-center font-black text-white border-solid border-2 border-cyan-600 bg-cyan-700 text-2xl center'>{a.ss}</h1>
 </div>
-<Image alt="foto" src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></Image>
+<img alt="foto" src={`https://spoyer.com/api/team_img/soccer/${a.away.id}.png`}></img>
 </div>
 
 {a.stats ? 

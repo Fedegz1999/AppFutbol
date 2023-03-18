@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { DetailsClose } from "../DetailsClose"
 import DetailsTeam from "../DetailsTeam"
 import { useAppDispatch, useAppSelector } from "@/redux/hooks"
 import { setIsModal, setIsModalopen } from "@/redux/modalSlice";
 import { LoadRemove, LoadStart } from "../Loading";
-import Image from "next/image";
+
 
 
 
@@ -21,7 +21,10 @@ function selectTeam(e:any){
   dispatch(setIsModal(true))
 }
 
-
+useEffect(()=>{
+  LoadRemove()  
+  })
+ 
 return (
 <>
 
@@ -48,7 +51,7 @@ return (
 <tr  onClick={()=>selectTeam(a.id)} className="text-white hover:bg-gray-900 cursor-pointer bg-gray-800 border-b border-gray-700">
 
 <td className="w-1 border-solid sm:px-0.5 border-r-2 items-center border-white">{a.standing.position}</td>
-<td className="md:w-60 sm:w-auto flex items-center border-solid border-r-2 text-left  justify-start"><Image  className="md:w-6 w-3 " alt="logo" src={a.images.urlLogo[2]}></Image> {a.name.slice(0, 20)}</td>
+<td className="md:w-60 sm:w-auto flex items-center border-solid border-r-2 text-left  justify-start"><img  className="md:w-6 w-3 " alt="logo" src={a.images.urlLogo[2]}></img> {a.name.slice(0, 20)}</td>
 <td className="text-center md:px-2 px-1.5 w-1 border-solid border-r-2">{a.standing.points}</td>
 <td className="text-center md:px-2 px-1.5 border-solid border-r-2">{a.standing.played}</td>
 <td className="text-center md:px-2 px-1.5 border-solid border-r-2">{a.standing.won}</td>
