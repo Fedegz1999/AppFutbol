@@ -64,19 +64,22 @@ return (
   }
 
 
-
+  const key = process.env.NEXT_PUBLIC_PREMIER1
+  const key2 = process.env.NEXT_PUBLIC_PREMIER2
+  const key3 = process.env.NEXT_PUBLIC_PREMIER3
+  const key4 = process.env.NEXT_PUBLIC_PREMIER4
 
   export const getStaticProps = async () => {
-  const res = await fetch("https://api.unidadeditorial.es/sports/v1/classifications/current/?site=2&type=10&tournament=0106");
+  const res = await fetch(`${key}`);
    const rank = await res.json();
 
-   const res2 = await fetch("https://api.unidadeditorial.es/sports/v1/player-total-rank/sport/01/tournament/0106/sort/goals/current/?site=2&mn=10")
+   const res2 = await fetch(`${key2}`)
    const gol = await res2.json();
 
-   const res3 = await fetch("https://api.unidadeditorial.es/sports/v1/player-total-rank/sport/01/tournament/0106/sort/assists/current/?site=2&mn=10")
+   const res3 = await fetch(`${key3}`)
    const asist = await res3.json();
    
-   const res4 = await fetch("https://spoyer.com/api/en/get.php?login=ayna&token=12784-OhJLY5mb3BSOx0O&task=predatapage&sport=soccer&league=94&p=%201")
+   const res4 = await fetch(`${key4}`)
    const part = await res4.json();
    
 

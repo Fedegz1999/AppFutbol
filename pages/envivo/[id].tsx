@@ -5,6 +5,9 @@ import { LoadRemove, LoadStart } from '@/components/Loading'
 import { useEffect, useState } from 'react'
 
 
+const key = process.env.NEXT_PUBLIC_ID1
+const key2 = process.env.NEXT_PUBLIC_ID2
+
 
 export default function enVivo (props:any) {
 
@@ -180,10 +183,10 @@ export async function getServerSideProps(ctx:any) {
     var id = ctx.params;
 
     // You can use any data fetching library
-    const res = await fetch("https://spoyer.com/api/en/get.php?login=ayna&token=12784-OhJLY5mb3BSOx0O&task=eventdata&game_id=" + Object.values(id));
+    const res = await fetch(`${key}` + Object.values(id));
     const partido = await res.json();
 
-    const res2 = await fetch("https://spoyer.com/api/en/get.php?login=ayna&token=12784-OhJLY5mb3BSOx0O&task=lineupdata&game_id=" + Object.values(id));
+    const res2 = await fetch(`${key2}` + Object.values(id));
     const alineaciones = await res2.json();
 
 

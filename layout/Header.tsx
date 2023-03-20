@@ -22,7 +22,7 @@ export const Header = () => {
 
             <li className='  text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 hover:text-blue-400' onClick={transition}>
             <Link href={"/"}>
-    <Image src={Logo} alt="logo" className='md:absolute md:w-1/12 md:left-1 md:top-0 w-40 flex  md:justify-start' onClick={transition}></Image>
+    <Image src={Logo}   alt="logo" className='md:absolute md:w-1/12  h-20 md:left-1 md:top-0 w-28 flex  md:justify-start' onClick={transition}></Image>
     </Link>
     </li>
 

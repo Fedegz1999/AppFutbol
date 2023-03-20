@@ -1,11 +1,12 @@
 import { LoadRemove } from '@/components/Loading';
-import { Partidos } from '@/components/Tables/Partidos'
 import { PartidosHoy } from '@/components/Tables/PartidosHoy';
 import { PartidosVivo } from '@/components/Tables/PartidosVivo';
-import { Partidosmañana } from '@/utils/client';
-import axios from 'axios';
 import React, { useEffect } from 'react'
 
+
+
+const key = process.env.NEXT_PUBLIC_INDEX1
+const key2 = process.env.NEXT_PUBLIC_INDEX2
 
 
 
@@ -32,10 +33,10 @@ export default function Home(props:any) {
 
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://spoyer.com/api/en/get.php?login=ayna&token=12784-OhJLY5mb3BSOx0O&task=livedata&sport=soccer");
+  const res = await fetch(`${key}`);
    const live = await res.json();
 
-   const res3 = await fetch(`https://spoyer.com/api/en/get.php?login=ayna&token=12784-OhJLY5mb3BSOx0O&task=predata&sport=soccer&day=today`)
+   const res3 = await fetch(`${key2}`)
    const today = await res3.json()
    
     return {
@@ -47,4 +48,3 @@ export const getStaticProps = async () => {
  };
 
 
- //https://spoyer.com/api/en/get.php?login=ayna&token=12784-OhJLY5mb3BSOx0O&task=predata&sport=soccer&day=
