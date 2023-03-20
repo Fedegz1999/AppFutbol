@@ -28,7 +28,7 @@ let premier = props.hoy.games_pre.filter((a:any) => a.league.name === "England P
     let ChileA = props.hoy.games_pre.filter((a:any) => a.league.name ==="Chile Primera Division")
 
 return (
-<div className="mt-10 md:pb-0 pb-10">
+<div className="mt-10 md:pb-48 pb-10">
 
 
 {/* CHAMPIONS */}

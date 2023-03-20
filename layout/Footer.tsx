@@ -1,7 +1,7 @@
 export const Footer = () => {
     return (
         <>
-        <div className="bg-header top-full  w-full h-max ">
+        <div className="bg-header top-full w-full h-max ">
 
 
                           <h1 className="font-bold font-sans flex justify-center">Contacto:</h1>

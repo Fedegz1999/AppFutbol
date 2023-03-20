@@ -14,14 +14,13 @@ export default function App(appProps: AppProps) {
   }, []);
 
   return (
-    <>
 <div className='bg-cesped w-full min-h-screen h-full '>
 <Provider store={store}>
     <Header/>
     <Component {...pageProps} />
+<Footer/>
     </Provider>
     </div>
-<Footer/>
-</>
+
   )
 }
