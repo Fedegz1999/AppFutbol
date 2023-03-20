@@ -1,10 +1,10 @@
-import { Header } from '@/layout/Header'
+import { Header } from '../layout/Header'
 import { AppProps } from 'next/app';
 import { store } from '@/redux/store'
 import '@/styles/globals.css'
 import { Provider } from 'react-redux'
 import { useEffect } from 'react';
-import { Footer } from '@/layout/Footer';
+import { Footer } from '../layout/Footer';
 
 export default function App(appProps: AppProps) {
   const { Component, pageProps } = appProps;

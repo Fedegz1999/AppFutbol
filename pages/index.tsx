@@ -41,7 +41,7 @@ export const getStaticProps = async () => {
    
     return {
        props: {
-          vivo: live, hoy: today
+          vivo: live, hoy: today, fallback: false
        },
        revalidate: 60
     };

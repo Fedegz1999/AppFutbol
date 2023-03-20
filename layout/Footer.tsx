@@ -1,6 +1,6 @@
 export const Footer = () => {
     return (
-        <>
+        
         <div className="bg-header top-full w-full h-max ">
 
 
@@ -15,6 +15,5 @@ export const Footer = () => {
             </div>
             </div>
          
-        </>
     )
 }

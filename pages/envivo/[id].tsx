@@ -1,8 +1,5 @@
-import { useRouter } from 'next/router'
-import { GetServerSideProps } from 'next'
 import { PlantelEnVivo } from '@/components/Tables/PlantelEnVivo'
-import { LoadRemove, LoadStart } from '@/components/Loading'
-import { useEffect, useState } from 'react'
+
 
 
 const key = process.env.NEXT_PUBLIC_ID1

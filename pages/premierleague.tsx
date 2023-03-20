@@ -85,7 +85,7 @@ return (
 
     return {
        props: {
-          data: rank, goals: gol, assists: asist, matchs: part
+          data: rank, goals: gol, assists: asist, matchs: part, fallback: false
        },
     };
  };

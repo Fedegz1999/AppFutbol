@@ -1,10 +1,9 @@
-import { LoadRemove } from "@/components/Loading";
 import Asistencias from "@/components/Tables/Asistencias";
 import Goles from "@/components/Tables/Goles";
 import { Partidos } from "@/components/Tables/Partidos";
 import Tablas  from "@/components/Tables/Tablas";
 import arregladora from "@/utils/client";
-import { useEffect } from "react";
+
 
 
 
@@ -85,7 +84,7 @@ export default function laLiga(data: any) {
 
     return {
        props: {
-          data: rank, goals: gol, assists: asist, matchs: part
+          data: rank, goals: gol, assists: asist, matchs: part, fallback: false
        },
     };
  };
