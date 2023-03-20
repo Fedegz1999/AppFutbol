@@ -22,42 +22,42 @@ export const Header = () => {
 
             <li className='  text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 hover:text-blue-400' onClick={transition}>
             <Link href={"/"}>
-    <Image src={Logo}   alt="logo" className='md:absolute md:w-1/12  h-20 md:left-1 md:top-0 w-28 flex  md:justify-start' onClick={transition}></Image>
+    <Image src={Logo}   alt="logo" className='md:absolute md:w-1/12 ml-4 md:ml-0  h-20 md:left-1 md:top-0 w-28 flex   md:justify-start' onClick={transition}></Image>
     </Link>
     </li>
 
 
-            <li className='  text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 hover:text-blue-400' onClick={transition}>
+            <li className='  text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 text-center hover:text-blue-400' onClick={transition}>
                     <Link href={"/primera"}> 
                         Primera Argentina
                         </Link>
                     </li>
 
-                    <li className=' text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 hover:text-blue-400' onClick={transition}>
+                    <li className=' text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 text-center hover:text-blue-400' onClick={transition}>
                     <Link href={"/premierleague"}>
                         Premier League
                         </Link>
                     </li>
 
-                    <li className=' text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 hover:text-blue-400' onClick={transition}>
+                    <li className=' text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 text-center hover:text-blue-400' onClick={transition}>
                     <Link href={"/laliga"}>
                         La Liga
                         </Link>
                     </li>     
 
-                    <li className='  text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 hover:text-blue-400' onClick={transition}>
+                    <li className='  text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 text-center hover:text-blue-400' onClick={transition}>
                     <Link href={"/bundesliga"}>
                         Bundesliga
                         </Link>
                     </li>          
 
-                    <li className=' text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 hover:text-blue-400' onClick={transition}>
+                    <li className=' text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 text-center hover:text-blue-400' onClick={transition}>
                     <Link href={"/ligue1"}>
                         Ligue 1
                         </Link>
                     </li>       
 
-                    <li className='  text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 hover:text-blue-400' onClick={transition}>
+                    <li className='  text-cyan-800 font-mono  md:border-r-2 md:border-black md:px-2 text-center hover:text-blue-400' onClick={transition}>
                     <Link href={"/serieA"}>
                         Serie A
                         </Link>
