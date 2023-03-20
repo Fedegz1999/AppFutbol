@@ -5,7 +5,7 @@ export const Partidos = (props:any) => {
 
 return (
 <>
-<div>
+<div className="pb-10">
 <div className="md:w-full pb-2 flex justify-center pt-2 h-max">
   <table className="table-auto   border-cyan-700 font-mono ">
     <thead className="text-white ">

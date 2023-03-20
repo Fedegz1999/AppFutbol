@@ -8,7 +8,7 @@ export const PlantelEnVivo = (props:any) =>{
         })
         
     return ( 
-        <div className="md:flex gap-10 justify-center">
+        <div className="md:flex gap-10 pb-10 justify-center">
 <div>
 
 <div className=" md:w-full w-40 pt-5 ml-5 md:ml-0 md:flex md:gap-10 justify-center h-max">

@@ -4,6 +4,7 @@ import { store } from '@/redux/store'
 import '@/styles/globals.css'
 import { Provider } from 'react-redux'
 import { useEffect } from 'react';
+import { Footer } from '@/layout/Footer';
 
 export default function App(appProps: AppProps) {
   const { Component, pageProps } = appProps;
@@ -13,15 +14,14 @@ export default function App(appProps: AppProps) {
   }, []);
 
   return (
-<div className='bg-cesped w-full h-full '>
+    <>
+<div className='bg-cesped w-full min-h-screen h-full '>
 <Provider store={store}>
     <Header/>
-
-
-
     <Component {...pageProps} />
     </Provider>
     </div>
-
+<Footer/>
+</>
   )
 }
